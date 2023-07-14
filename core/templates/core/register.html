@@ -1,0 +1,28 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block link %}
+<link rel="stylesheet" href="{% static 'core/css/register.css' %}">{% endblock %}
+{% block title %}Registro{% endblock %}
+{% block content %}
+
+
+
+
+<form class="form" method="post">
+
+    <h2>Registro</h2>
+    {% csrf_token %}
+    {{ form.as_p }}
+
+    <button type="submit" id="submit">REGISTRARSE</button>
+    <a href="{% url 'login' %}"> Iniciar Sesión</a>
+    {% if messages %}
+    {% for message in messages %}
+    <div class="notification {{ message.tags }}"></div>
+    {{ message }}
+    {% endfor %}
+    {% endif %}
+
+</form>
+
+{% endblock %}

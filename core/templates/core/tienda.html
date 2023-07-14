@@ -1,0 +1,57 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block link %}
+<link rel="stylesheet" href="{% static 'core/css/tienda.css' %}">
+{% endblock %}
+{% block title %} Tienda {% endblock %}
+{% block content%}
+<main>
+    <h2 class="text-center title">Tienda</h2>
+    {% if user.is_authenticated and user.is_superuser %}
+    <div class="d-flex justify-content-center agregar"> <a class="btn btn-outline-secondary mx-auto"
+            href="{% url 'producto-add' %}">Agregar</a></div>
+    {% endif %}
+
+    <div id="container-main" class="container">
+
+        <div class="row">
+
+            {% for producto in productos %}
+            <div id="centrado" class="col-sm-6 col-md-3 mb-3">
+                <figure id="product-card">
+                    {% if producto.img %}
+                    <img class="productos-img" src="{{producto.img.url}}" alt="" id="product-card__image" />
+                    {% endif %}
+                    <figcaption id="product-card__caption">
+                        <header id="product-card__header">
+                            <h2 id="product-card__title">{{producto.titulo}}</h2>
+                            <p id="product-card__subtitle">{{producto.descripcion}}</p>
+                        </header>
+                        <footer id="product-card__footer">
+                            <span id="product-card__price">${{producto.precio}}</span>
+
+                            {% if user.is_authenticated and user.is_superuser %}
+                            <a class="btn btn-outline-secondary"
+                                href="{% url 'producto-edit' producto_id=producto.id %}"><i
+                                    class="bi bi-pen-fill"></i></a>
+
+                            <button type="button" id="Eliminar" value="Eliminar" class="btn btn-danger" onclick=""><a
+                                    href="{% url 'producto-delete' producto_id=producto.id %}"><i
+                                        class="bi bi-trash3-fill"></i></a></button>
+                            {% endif %}
+
+
+                        </footer>
+                    </figcaption>
+                </figure>
+
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+
+
+
+
+    {% endblock %}

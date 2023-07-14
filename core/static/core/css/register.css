@@ -1,0 +1,136 @@
+:root {
+    --color-primary: #fa734e;
+    --color-primary-light: #f8cfc4;
+    --color-dark: #343a40;
+}
+
+body {}
+
+form {
+    margin: 0;
+    padding: 250px;
+    font-size: 1rem;
+}
+
+input {
+    width: 100%;
+    border: 0;
+    border-bottom: 2px solid #D3D8DC;
+    outline: 0;
+    background: #fff;
+    padding: 20px 0 4px;
+    margin: 0 0 20px;
+    color: #777B7E;
+}
+
+input:focus {
+    border-color: var(--color-primary);
+    color: #2C3238;
+}
+
+textarea {
+    width: 100%;
+    border: 0;
+    border-bottom: 2px solid #D3D8DC;
+    outline: 0;
+    background: #fff;
+    padding: 20px 0 4px;
+    margin: 0 0 20px;
+    color: #777B7E;
+}
+
+textarea:focus {
+    border-color: var(--color-primary);
+    color: #2C3238;
+}
+
+.form span,
+li {
+    font-size: 10px;
+}
+
+#submit {
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+    background: var(--color-primary-light);
+    color: #fff;
+    border: 0;
+    border-radius: 4px;
+    opacity: .8;
+    transition: .35s linear;
+}
+
+#submit:hover {
+    opacity: 1;
+}
+
+
+a {
+    color: var(--color-primary-light);
+}
+
+a:hover {
+    color: #e19b88;
+}
+
+/*Notifications*/
+.notification {
+    text-align: center;
+    padding: 10px 20px;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 0.9rem;
+}
+
+.success {
+    background: #43DC7E;
+    color: white;
+}
+
+.error {
+    background: #AB3444;
+    color: white;
+    margin-bottom: 20px;
+}
+
+body.dark-mode input {
+    border-color: #292c30;
+    color: white;
+    background-color: #343A40;
+    border-bottom: 2px solid #d1d1d1;
+    outline: 0;
+
+    padding: 20px 0 4px;
+    margin: 0 0 20px;
+    color: #ffffff;
+}
+
+
+
+body.dark-mode input::placeholder {
+    color: #61666d;
+}
+
+body.dark-mode input:focus {
+    background-color: #343A40;
+
+    border-color: var(--color-primary);
+
+
+}
+
+body.dark-mode textarea {
+    background-color: #343A40;
+    border-color: #292c30;
+    color: white;
+}
+
+body.dark-mode textarea:focus {
+    background-color: #343A40;
+    color: white;
+}
+
+body.dark-mode textarea::placeholder {
+    color: white;
+}

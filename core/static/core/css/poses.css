@@ -1,0 +1,57 @@
+:root {
+    --color-primary: #fa734e;
+    --color-primary-light: #f8cfc4;
+    --color-dark: #343a40;
+}
+
+main {
+    margin-top: 180px;
+}
+
+.pose img {
+    width: 200px;
+}
+
+.poses {
+    flex-wrap: wrap;
+    gap: 100px;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.poses {
+    position: relative;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+}
+
+
+
+.pose span {
+    font-size: 25px;
+    font-weight: bold;
+    color: #e19b88;
+}
+
+.pose {
+    transition: transform 0.3s;
+}
+
+.pose:hover {
+    transform: scale(1.1);
+
+}
+
+span {
+    color: var(--color-primary);
+}
+
+
+@media(max-width:781px) {
+    body {
+        margin-top: 230px;
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+}

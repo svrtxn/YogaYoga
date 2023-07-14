@@ -1,0 +1,102 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block link %}
+<link rel="stylesheet" href="{% static 'core/css/config.css' %}">{% endblock %}
+{% block title %}Registro{% endblock %}
+{% block content %}
+<main>
+    <h3>Administración Clases</h3>
+    <div>
+        <a href="{% url 'config' %}" id="btnn">VOLVER</a>
+    </div>
+    <h3>Lista de clases</h3>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <form method="POST" action="{% url 'crear_clase' %}">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" name="nombre" id="nombre" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="descripcion">Descripción:</label>
+                        <textarea name="descripcion" id="descripcion" class="form-control" rows="4" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="duracion">Duración:</label>
+                        <input type="number" name="duracion" id="duracion" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="fecha">Fecha:</label>
+                        <input type="date" name="fecha" id="fecha" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="hora_inicio">Hora de inicio:</label>
+                        <input type="time" name="hora_inicio" id="hora_inicio" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="hora_fin">Hora de fin:</label>
+                        <input type="time" name="hora_fin" id="hora_fin" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="cupo_maximo">Cupo máximo:</label>
+                        <input type="number" name="cupo_maximo" id="cupo_maximo" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="precio">Precio:</label>
+                        <input type="number" step="0.01" name="precio" id="precio" class="form-control" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Crear Clase</button>
+                </form>
+
+            </div>
+            <div class="col-md-4">
+
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+    </div>
+    {% for c in contactos %}
+    <div class="table-responsive">
+
+
+        <table class="table table-striped table-bordered table-sm table-secondary">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Usuario</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Apellido</th>
+                    <th scope="col">Telefono</th>
+                    <th scope="col">Correo</th>
+                    <th scope="col">Asunto</th>
+                    <th scope="col">Comentarios</th>
+                    <th scope="col">Fecha Creación</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <tr>
+                    <th scope="row">{{ forloop.counter }}</th>
+                    <td>{{ c.user }}</td>
+                    <td>{{ c.nombre }}</td>
+                    <td>{{ c.apellido }}</td>
+                    <td>{{ c.telefono }}</td>
+                    <td>{{ c.correo }}</td>
+                    <td>{{ c.asunto }}</td>
+                    <td>{{ c.comentarios }}</td>
+                    <td>{{ c.created_at }}</td>
+                </tr>
+
+            </tbody>
+        </table>
+        <a href="{% url 'eliminar_contacto' c.id %}" class="btn btn-danger mb-3"><i class="bi bi-trash3-fill"></i></a>
+
+    </div>
+    {% endfor %}
+
+</main>
+
+{% endblock %}

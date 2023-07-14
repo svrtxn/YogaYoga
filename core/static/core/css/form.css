@@ -1,0 +1,24 @@
+.containerForm {
+    display: flex;
+    justify-content: center;
+    width: 900px;
+    margin: 15vh auto
+}
+
+#actualizar {
+    background-color: #e19b88;
+    color: white;
+}
+
+#enviar {
+    background-color: #e19b88;
+    color: white;
+}
+
+body.dark-mode .volver a {
+    color: white;
+}
+
+body.dark-mode .volver a:hover {
+    color: #e19b88;
+}

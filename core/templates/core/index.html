@@ -1,0 +1,143 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block link %}<link rel="stylesheet" href="{% static 'core/css/main.css' %}">
+<link rel="stylesheet" href="{% static 'core/css/home.css' %}"> {% endblock %}
+
+{% block title %} Inicio {% endblock %}
+
+
+{% block content %}
+
+    <main>
+        <!-- CARRUSEL -->
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="2000">
+                    <img src="{% static 'core/imgs/carusel/carNuevaSuc.jpg'%}" class="d-block w-100" alt="Anuncio nueva sucursal">
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                    <a href="{% url 'clases' %}"><img src="{% static 'core/imgs/carusel/carClasesOnline.jpg'%}" class="d-block w-100"
+                            alt="Promoción clases de Yoga"></a>
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                    <a href="{% url 'posturas' %}"><img src="{% static 'core/imgs/carusel/carPoses.jpg'%}" class="d-block w-100"
+                            alt="Promoción nuevas poses"></a>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        <div class="contenido-index">
+            <div class="bienvenidos">
+                <h1 class="pt-3 fs-2 border-top text-center"> Bienvenidos a <span> Yoga Yoga</span></h1>
+                <div class="presentacion">
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <img src="{% static 'core/imgs/clases/yoga2.jpeg'%}" alt="">
+                        </div>
+                        <div class="col-sm-6">
+                            <p class="p-3 fs-5 text-center">En esta agencia aprenderas sobre la disciplina milenaria
+                                que te
+                                ayudará a mejorar tu salud física y emocional, aumentar tu flexibilidad y fortaleza,
+                                y encontrar un
+                                equilibrio entre cuerpo y mente.
+                                aprender todo sobre yoga.</p>
+                        </div>
+                        <div class="col-sm-3">
+                            <img src="{% static 'core/imgs/clases/zen2.jpeg' %}" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+            <h2 class="text-center benf">Beneficios del Yoga</h2>
+            <div class="logo-container">
+
+                <img class="logo-icon" src="{% static 'core/imgs/icons/estres.png' %}" alt="Logo">
+                <span class="logo-text">Reduce el estrés</span>
+                <img class="logo-icon2" src="{% static 'core/imgs/icons/postura.png' %}" alt="">
+                <span class="logo-text">Mejor postura corporal</span>
+                <img class="logo-icon3" src="{% static 'core/imgs/icons/flexx.png' %}" alt="">
+                <span class="logo-text">Mejor flexibilidad </span>
+                <img class="logo-icon4" src="{% static 'core/imgs/icons/zzz.png' %}" alt="">
+                <span class="logo-text">Ayuda a dormir mejor</span>
+
+            </div>
+
+            <section>
+                <hr>
+                <h2 class="salas">Salas y zonas </h2>
+                <div class="container-cards">
+
+                    <div class="card">
+                        <img src="{% static 'core/imgs/salas/sala1.jpeg' %}" alt="Foto 1">
+                        <h2>Sala Equilibrio</h2>
+                        <p>Esta sala de yoga y pilates está diseñada para
+                            brindar un
+                            ambiente
+                            sereno y pacífico
+                            donde los practicantes pueden encontrar equilibrio físico y
+                            mental.</p>
+                    </div>
+
+                    <div class="card">
+                        <img src="{% static 'core/imgs/salas/sala2.jpeg'%}" alt="Foto 2">
+                        <h2>Sala Funcional</h2>
+                        <p> En este centro de yoga y pilates, se fusionan las
+                            prácticas
+                            tradicionales con
+                            elementos de entrenamiento funcional para promover la vitalidad
+                            y el bienestar
+                            general. La sala cuenta con equipos especializados para técnicas
+                            de
+                            entrenamiento de fuerza y ​​acondicionamiento físico.</p>
+                    </div>
+
+                    <div class="card">
+                        <img src="{% static 'core/imgs/salas/sala3.jpeg' %}" alt="Foto 3">
+                        <h2>Sala Zen</h2>
+                        <p>Esta sala está inspirada en armonía y
+                            bienestar. Su
+                            diseño
+                            acogedor incluye
+                            paredes
+                            de colores cálidos y una decoración inspirada en la
+                            naturaleza. Se realizan
+                            sesiones
+                            de
+                            meditación guiada y técnicas de respiración para
+                            promover un estado de calma
+                            y
+                            equilibrio interior. </p>
+                    </div>
+
+                    <div class="card">
+                        <img src="{% static 'core/imgs/salas/sala4.jpeg' %}" alt="Foto 4">
+                        <h2>Sala Balanza</h2>
+                        <p>En esta sala te invitamos a experimentar la
+                            yoga
+                            utilizando
+                            pelotas de
+                            pilates.
+                            Nuestro estudio está diseñado especialmente para
+                            brindarte un ambiente
+                            acogedor y
+                            vibrante, donde podrás descubrir los beneficios de este
+                            versátil accesorio.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+    </main>
+
+{% endblock %}

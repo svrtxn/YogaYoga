@@ -1,0 +1,34 @@
+main {
+    margin-top: 150px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.table-responsive {
+    display: flex;
+
+}
+
+h3 {
+    margin-top: 30px;
+}
+
+h3 {
+    margin-bottom: 30px;
+}
+
+.table-responsive a {
+    margin-top: 15px;
+}
+
+.head-cont {
+    display: flex;
+}
+
+#btnn {
+    padding: 10px;
+    background-color: #fa734e;
+    text-decoration: none;
+    color: white;
+    margin: 30px;
+}

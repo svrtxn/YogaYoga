@@ -1,0 +1,67 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block link %}
+<link rel="stylesheet" href="{% static 'core/css/nosotros.css' %}"> {% endblock %}
+{% block title %} Nosotros {% endblock %}
+{% block content %}
+<main>
+    <section>
+        <h2 class="text-center tittle">Nosotros <span>Yoga Yoga </span></h2>
+        <div class="row nosotros-info">
+            <div class="text-justify">
+                <h4>¿Quiénes somos?</h4>
+                <p>Yoga Yoga esta formado por un equipo apasionado
+                    por el yoga y
+                    estamos comprometidos en compartir nuestros conocimientos y experiencias para ayudarte a
+                    encontrar la
+                    armonía física, mental y espiritual a través de esta práctica ancestral. <br><br>
+
+
+                    Te invitamos a explorar nuestra página web, conocer nuestros horarios de clases,
+                    poses de yoga, salas, sucursales, y
+                    descubrir cómo puedes unirte a nuestra comunidad de yoga. Estamos aquí para guiarte en
+                    tu
+                    viaje hacia el
+                    bienestar y la serenidad.
+
+                    ¡Namaste!</p>
+                <p class="fs-5">¡Bienvenidos a <span>YOGA YOGA</span> !</p>
+            </div>
+    </section>
+
+    <section>
+        <h4 id="titulo-profile">Nuestro Equipo:</h4>
+        <div class="nosotros">
+
+            <div class="person">
+                <div class="container-nosotros">
+                    <div class="container-inner">
+                        <img class="circle" src="" alt="">
+                        <img class="img img2" src="{% static 'core/imgs/ilustraciones/mariano.png' %}" alt="">
+                    </div>
+                </div>
+                <div class="divider"></div>
+                <div class="name">Mariano Leal</div>
+                <div class="title">ma.leal@duocuc.cl</div>
+            </div>
+            <div class="person">
+                <div class="container-nosotros">
+                    <div class="container-inner">
+                        <img class="circle" src="" alt="">
+                        <img class="img img3" src="{% static 'core/imgs/ilustraciones/steffi.png' %}" alt="">
+                    </div>
+                </div>
+                <div class="divider"></div>
+                <div class="name">Steffi Ryser</div>
+                <div class="title">st.ryser@duocuc.cl</div>
+            </div>
+        </div>
+
+    </section>
+
+
+
+
+</main>
+
+{% endblock %}

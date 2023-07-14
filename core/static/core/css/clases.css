@@ -1,0 +1,50 @@
+:root {
+    --color-primary: #fa734e;
+    --color-primary-light: #f8cfc4;
+    --color-dark: #343a40;
+}
+
+body {
+    margin-top: 150px;
+
+}
+
+
+body h2 {
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+
+.card img {
+    width: 100%;
+
+}
+
+@media (max-width: 781px) {
+    main {
+        margin: 50px;
+        margin-top: 250px;
+        margin-left: -30px;
+        margin-right: -30px;
+    }
+
+    .clases-section {
+        padding: 40px;
+    }
+
+    .card {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .card__heading {
+        font-size: 10px;
+        max-width: 100px;
+
+    }
+}

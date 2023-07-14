@@ -1,0 +1,6 @@
+main {
+    display: flex;
+    margin-top: 300px !important;
+    margin-bottom: 200px;
+    justify-content: center;
+}

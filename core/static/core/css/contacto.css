@@ -1,0 +1,197 @@
+main {
+    margin-top: 150px;
+}
+
+.color-titulo {
+    color: antiquewhite;
+}
+
+.color-fondo-titulo {
+    background-color: rgb(20, 20, 157);
+}
+
+#error,
+#error2,
+#error3,
+#error4,
+#error5,
+#error6,
+#error7,
+#error8 {
+    color: #ff7676;
+    display: none;
+    font-size: 13px;
+}
+
+#error9,
+#error10,
+#error11,
+#error12 {
+    color: #ff7676;
+    display: none;
+    font-size: 13px;
+}
+
+
+#enviar {
+    background-color: #e19b88;
+    border-color: #e19b88;
+    color: #ffffff;
+}
+
+main h2 {
+    color: #e19b88;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+a:hover {
+    color: #e19b88;
+}
+
+main i {
+    color: #e19b88;
+}
+
+.redes i {
+    font-size: 2em;
+    margin: 5px;
+}
+
+#palabrasRestantes {
+    color: #ff7676;
+}
+
+.custom-button {
+    background-color: #e19b88;
+    border-radius: 0;
+}
+
+.custom-button i {
+    color: white;
+}
+
+.custom-button:hover {
+    background-color: #e19b88;
+}
+
+.custom-button2 {
+    background-color: #e19b88;
+    border-radius: 0;
+}
+
+.custom-button2 i {
+    color: white;
+}
+
+.custom-button2:hover {
+    background-color: #e19b88;
+}
+
+.modal-footer button {
+    background: #e19b88;
+    color: #ffffff;
+}
+
+.modal-footer button:hover {
+    background: #e19b88;
+    color: #ffffff;
+}
+
+
+/* OSCURO */
+body.dark-mode #info-contacto a {
+    color: #ffffff;
+}
+
+body.dark-mode a:hover {
+    color: #e19b88;
+}
+
+#map {
+    width: 30vw;
+    height: 30vh;
+}
+
+body.dark-mode #error,
+#error2,
+#error3,
+#error4,
+#error5,
+#error6,
+#error7,
+#error8 {
+    color: #ff7676;
+    display: none;
+    font-size: 13px;
+}
+
+body.dark-mode #error9,
+#error10,
+#error11,
+#error12 {
+    color: #ff7676;
+    display: none;
+    font-size: 13px;
+}
+
+body.dark-mode #palabrasRestantes {
+    color: #ff7676;
+}
+
+body.dark-mode .modal-content {
+    background-color: #292c30;
+}
+
+body.dark-mode input {
+    border-color: #292c30;
+    color: white;
+    background-color: #212529;
+}
+
+body.dark-mode input::placeholder {
+    color: #61666d;
+}
+
+body.dark-mode input:focus {
+    background-color: #212529;
+    color: #939aa0;
+}
+
+body.dark-mode textarea {
+    background-color: #212529;
+    border-color: #292c30;
+    color: white;
+}
+
+body.dark-mode textarea:focus {
+    background-color: #212529;
+    color: white;
+}
+
+body.dark-mode textarea::placeholder {
+    color: white;
+}
+
+#formulario {
+
+    padding: 12px;
+
+}
+
+@media(max-width:781px) {
+    body {
+        margin-top: 230px;
+    }
+
+    #map {
+        width: 400px;
+    }
+}

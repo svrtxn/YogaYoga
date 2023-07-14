@@ -1,0 +1,42 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block link %}
+<link rel="stylesheet" href="{% static 'core/css/clases.css' %}"> {% endblock %}
+{% block title %} Clases {% endblock %}
+{% block content%}
+
+<body>
+    <h2>Nuestras variedades de clases: </h2>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="card">
+                    <img src="{% static 'core/imgs/clases/zen1.jpeg' %}" alt="Imagen 1">
+                    <h3>Yin Yoga</h3>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card">
+                    <img src="{% static 'core/imgs/clases/yoga2.jpeg' %}" alt="Imagen 1">
+                    <h3>Yoga </h3>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card">
+                    <img src="{% static 'core/imgs/clases/funcional2.jpeg' %}" alt="Imagen 1">
+                    <h3>Yoga Funcional</h3>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card">
+                    <img src="{% static 'core/imgs/clases/yoga.jpeg' %}" alt="Imagen 1">
+                    <h3>Pilates</h3>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+</body>
+{% endblock %}

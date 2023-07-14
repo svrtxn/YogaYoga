@@ -1,0 +1,23 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block link %}
+<link rel="stylesheet" href="{% static 'core/css/register.css' %}">{% endblock %}
+{% block title %}Iniciar Sesión{% endblock %}
+{% block content %}
+{% if messages %}
+{% for message in messages %}
+<div class="notification {{ message.tags }}"></div>
+{{ message }}
+{% endfor %}
+{% endif %}
+
+<form class="form" method="post">
+    <h2>Iniciar Sesión</h2>
+    {% csrf_token %}
+    {{ form.as_p }}
+
+    <button type="submit" id="submit">INICIAR SESION</button>
+    <a href="{% url 'register' %}"> Crear cuenta..</a>
+</form>
+
+{% endblock %}
